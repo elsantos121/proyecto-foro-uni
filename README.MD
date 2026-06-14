@@ -1,7 +1,7 @@
 # INTEGRANTES DEL GRUPO
 - Santiago Orlando Luna
 - Nicolas Fernandez Garcia
-- Giuliano Capetto
+- Ivo Giuliano Cappetto
 - Martin Sánchez
 - Joaquín Grosso
 - Lautaro Gutierrez Lardit 
