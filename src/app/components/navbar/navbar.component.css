@@ -1,0 +1,71 @@
+.navbar {
+  background-color: #1a3c5e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  height: 58px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  font-family: Arial, sans-serif;
+}
+.logo {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.links a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 0.82rem;
+  padding: 6px 9px;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+.links a:hover,
+.links a.activo { background: rgba(255,255,255,0.15); color: white; }
+.btn-registro {
+  background: white !important;
+  color: #1a3c5e !important;
+  font-weight: bold;
+}
+.btn-logout {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  padding: 5px 9px;
+  border-radius: 5px;
+  font-size: 0.82rem;
+  cursor: pointer;
+}
+.btn-logout:hover { background: rgba(255,255,255,0.1); }
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+@media (max-width: 900px) {
+  .hamburger { display: block; }
+  .links {
+    display: none;
+    position: absolute;
+    top: 58px; left: 0; right: 0;
+    background: #1a3c5e;
+    flex-direction: column;
+    padding: 12px;
+    gap: 6px;
+  }
+  .links.abierto { display: flex; }
+  .links a, .btn-logout { width: 100%; }
+}

@@ -1,0 +1,13 @@
+.home { font-family: Arial, sans-serif; background: #f4f6f8; min-height: 100vh; }
+.hero { background: linear-gradient(135deg, #1a3c5e, #2d6a9f); color: white; text-align: center; padding: 80px 20px; }
+.hero h1 { font-size: 2rem; margin: 0 0 14px; }
+.hero p  { font-size: 1rem; opacity: .9; margin: 0 0 28px; }
+.hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn-primary  { background: white; color: #1a3c5e; padding: 11px 26px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: .9rem; }
+.btn-secondary{ background: transparent; color: white; padding: 11px 26px; border-radius: 6px; text-decoration: none; border: 2px solid white; font-size: .9rem; }
+.secciones { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 18px; max-width: 1000px; margin: 44px auto; padding: 0 20px; }
+.card { background: white; border-radius: 10px; padding: 26px 18px; border: 1px solid #dde3ec; text-decoration: none; color: inherit; display: block; transition: box-shadow .2s; }
+.card:hover { box-shadow: 0 4px 14px rgba(0,0,0,.09); }
+.card span { font-size: 1.8rem; }
+.card h2 { font-size: 1rem; color: #1a3c5e; margin: 8px 0 5px; }
+.card p  { font-size: .85rem; color: #555; margin: 0; line-height: 1.5; }

@@ -1,0 +1,64 @@
+<div class="pagina">
+  @if (publicacion) {
+    <a routerLink="/foro" class="volver">← Volver al foro</a>
+
+    <div class="pub">
+      <div class="pub-meta">
+        <span class="tipo tipo-{{ publicacion.tipo }}">{{ publicacion.tipo }}</span>
+        <span class="cat">{{ nombreCategoria }}</span>
+        @for (t of publicacion.tags; track t) { <span class="tag">#{{ t }}</span> }
+      </div>
+      <h1>{{ publicacion.titulo }}</h1>
+      <p class="autor">Por <strong>{{ publicacion.autorNombre }}</strong> · {{ publicacion.fechaCreacion }}</p>
+      <p class="contenido">{{ publicacion.contenido }}</p>
+
+      <div class="acciones">
+        @if (auth.estaLogueado()) {
+          <button (click)="votar(1)">👍 {{ publicacion.votos }}</button>
+          <button (click)="votar(-1)">👎</button>
+          <button class="btn-report" (click)="reportar()">🚩 Reportar</button>
+        } @else {
+          <span class="votos-txt">👍 {{ publicacion.votos }} votos</span>
+        }
+        @if (auth.esModerador() || esDuenio()) {
+          <button class="btn-del" (click)="eliminar()">🗑️ Eliminar</button>
+        }
+      </div>
+    </div>
+
+    <div class="comentarios">
+      <h2>{{ comentarios.length }} respuesta(s)</h2>
+
+      @for (com of comentarios; track com.id) {
+        <div class="com" [class.solucion]="com.esSolucion">
+          @if (com.esSolucion) { <div class="badge-sol">✅ Solución marcada</div> }
+          <p class="com-txt">{{ com.contenido }}</p>
+          <div class="com-footer">
+            <span>{{ com.autorNombre }} · {{ com.fechaCreacion }}</span>
+            @if (auth.estaLogueado()) {
+              <div class="com-acc">
+                <button (click)="votarComentario(com.id, 1)">👍 {{ com.votos }}</button>
+                <button (click)="votarComentario(com.id, -1)">👎</button>
+                @if (publicacion.tipo === 'pregunta' && esDuenio() && !publicacion.solucionId) {
+                  <button class="btn-sol" (click)="marcarSolucion(com.id)">✅ Marcar solución</button>
+                }
+              </div>
+            }
+          </div>
+        </div>
+      } @empty {
+        <p class="vacio">Todavía no hay respuestas. ¡Sé el primero!</p>
+      }
+
+      @if (auth.estaLogueado()) {
+        <div class="nuevo-com">
+          <h3>Tu respuesta</h3>
+          <textarea [(ngModel)]="nuevoComentario" rows="4" placeholder="Escribí tu respuesta acá..."></textarea>
+          <button (click)="comentar()">Enviar respuesta</button>
+        </div>
+      } @else {
+        <div class="login-aviso"><a routerLink="/login">Iniciá sesión</a> para responder.</div>
+      }
+    </div>
+  }
+</div>

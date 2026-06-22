@@ -1,131 +1,17 @@
-.pagina {
-  font-family: Arial, sans-serif;
-  background-color: #f4f6f8;
-  min-height: 100vh;
-  padding-bottom: 60px;
-}
-
-/* encabezado */
-.encabezado {
-  background-color: #1a3c5e;
-  color: white;
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.encabezado h1 {
-  font-size: 2rem;
-  margin: 0 0 10px 0;
-}
-
-.encabezado p {
-  font-size: 1rem;
-  margin: 0;
-  opacity: 0.85;
-}
-
-/* secciones */
-.seccion {
-  max-width: 1100px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-
-.titulo-seccion {
-  font-size: 1.4rem;
-  color: #1a3c5e;
-  margin: 0 0 8px 0;
-}
-
-.subtitulo-seccion {
-  font-size: 0.9rem;
-  color: #666;
-  margin: 0 0 25px 0;
-}
-
-/* grilla de funcionalidades */
-.contenedor-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 18px;
-  margin-top: 25px;
-}
-
-.card {
-  background-color: white;
-  border-radius: 10px;
-  padding: 22px 18px;
-  border: 1px solid #dde3ec;
-}
-
-.card:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.icono {
-  font-size: 1.8rem;
-}
-
-.card h3 {
-  font-size: 1rem;
-  color: #1a3c5e;
-  margin: 8px 0 6px 0;
-}
-
-.card p {
-  font-size: 0.85rem;
-  color: #555;
-  line-height: 1.5;
-  margin: 0;
-}
-
-/* cards de otras secciones */
-.contenedor-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 18px;
-  margin-top: 25px;
-}
-
-.card-link {
-  background-color: white;
-  border-radius: 10px;
-  padding: 22px 18px;
-  border: 1px solid #dde3ec;
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-}
-
-.card-link:hover {
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.card-link .icono {
-  font-size: 1.8rem;
-  flex-shrink: 0;
-}
-
-.card-link h3 {
-  font-size: 1rem;
-  color: #1a3c5e;
-  margin: 0 0 6px 0;
-}
-
-.card-link p {
-  font-size: 0.85rem;
-  color: #555;
-  line-height: 1.5;
-  margin: 0 0 10px 0;
-}
-
-.link {
-  font-size: 0.85rem;
-  color: #2d6a9f;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.link:hover {
-  text-decoration: underline;
-}
+.pagina { font-family: Arial, sans-serif; background: #f4f6f8; min-height: 100vh; padding-bottom: 60px; }
+.encabezado { background: #1a3c5e; color: white; text-align: center; padding: 60px 20px; }
+.encabezado h1 { font-size: 2rem; margin: 0 0 10px; }
+.encabezado p  { font-size: 1rem; margin: 0; opacity: .85; }
+.seccion { max-width: 1100px; margin: 48px auto; padding: 0 20px; }
+.titulo-sec { font-size: 1.3rem; color: #1a3c5e; margin: 0 0 6px; }
+.sub-sec    { font-size: .88rem; color: #666; margin: 0 0 22px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr)); gap: 16px; margin-top: 22px; }
+.card { background: white; border-radius: 10px; padding: 20px 18px; border: 1px solid #dde3ec; }
+.card:hover { box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+.icono { font-size: 1.8rem; }
+.card h3, .card-link h3 { font-size: .95rem; color: #1a3c5e; margin: 8px 0 5px; }
+.card p,  .card-link p  { font-size: .83rem; color: #555; line-height: 1.5; margin: 0; }
+.grid-links { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr)); gap: 16px; margin-top: 22px; }
+.card-link { background: white; border-radius: 10px; padding: 18px; border: 1px solid #dde3ec; display: flex; gap: 14px; align-items: flex-start; text-decoration: none; color: inherit; transition: box-shadow .2s; }
+.card-link:hover { box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+.card-link .icono { font-size: 1.8rem; flex-shrink: 0; }

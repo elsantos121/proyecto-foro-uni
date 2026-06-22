@@ -1,0 +1,38 @@
+<div class="pagina">
+  <div class="form">
+    <a routerLink="/foro" class="volver">← Volver al foro</a>
+    <h1>Nueva publicación</h1>
+    @if (error) { <div class="error">{{ error }}</div> }
+
+    <label>Título *</label>
+    <input type="text" [(ngModel)]="titulo" placeholder="¿Cuál es tu pregunta o tema?" />
+
+    <div class="fila">
+      <div>
+        <label>Tipo *</label>
+        <select [(ngModel)]="tipo">
+          <option value="pregunta">❓ Pregunta</option>
+          <option value="debate">💬 Debate</option>
+          <option value="recurso">📎 Recurso</option>
+        </select>
+      </div>
+      <div>
+        <label>Categoría *</label>
+        <select [(ngModel)]="categoriaId">
+          <option value="">Seleccioná una categoría</option>
+          @for (c of categorias; track c.id) {
+            <option [value]="c.id">{{ c.icono }} {{ c.nombre }}</option>
+          }
+        </select>
+      </div>
+    </div>
+
+    <label>Contenido *</label>
+    <textarea [(ngModel)]="contenido" rows="7" placeholder="Explicá tu pregunta, debate o recurso con detalle..."></textarea>
+
+    <label>Etiquetas (separadas por coma)</label>
+    <input type="text" [(ngModel)]="tagsInput" placeholder="Ej: javascript, angular, frontend" />
+
+    <button (click)="publicar()">Publicar</button>
+  </div>
+</div>
