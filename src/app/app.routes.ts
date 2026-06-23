@@ -14,9 +14,8 @@ export const routes: Routes = [
   { path: 'servicios',         loadComponent: () => import('./pages/servicios/servicios.component').then(m => m.ServiciosComponent) },
   { path: 'galeria',           loadComponent: () => import('./pages/galeria/galeria.component').then(m => m.GaleriaComponent) },
   { path: 'galeria/:id',       loadComponent: () => import('./pages/galeria-detalle/galeria-detalle.component').then(m => m.GaleriaDetalleComponent) },
+  { path: 'nosotros',          loadComponent: () => import('./pages/nosotros/nosotros.component').then(m => m.NosotrosComponent) },
   // Rutas de los compañeros (cada uno agrega la suya):
   // { path: 'blog',     loadComponent: () => import('./pages/blog/blog.component').then(m => m.BlogComponent) },
-  // { path: 'galeria',  loadComponent: () => import('./pages/galeria/galeria.component').then(m => m.GaleriaComponent) },
-  // { path: 'nosotros', loadComponent: () => import('./pages/nosotros/nosotros.component').then(m => m.NosotrosComponent) },
   // { path: 'contacto', loadComponent: () => import('./pages/contacto/contacto.component').then(m => m.ContactoComponent) },
 ];
