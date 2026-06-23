@@ -12,6 +12,8 @@ export const routes: Routes = [
   { path: 'perfil',            loadComponent: () => import('./pages/perfil/perfil.component').then(m => m.PerfilComponent), canActivate: [authGuard] },
   { path: 'admin',             loadComponent: () => import('./pages/admin/admin.component').then(m => m.AdminComponent), canActivate: [adminGuard] },
   { path: 'servicios',         loadComponent: () => import('./pages/servicios/servicios.component').then(m => m.ServiciosComponent) },
+  { path: 'galeria',           loadComponent: () => import('./pages/galeria/galeria.component').then(m => m.GaleriaComponent) },
+  { path: 'galeria/:id',       loadComponent: () => import('./pages/galeria-detalle/galeria-detalle.component').then(m => m.GaleriaDetalleComponent) },
   // Rutas de los compañeros (cada uno agrega la suya):
   // { path: 'blog',     loadComponent: () => import('./pages/blog/blog.component').then(m => m.BlogComponent) },
   // { path: 'galeria',  loadComponent: () => import('./pages/galeria/galeria.component').then(m => m.GaleriaComponent) },
