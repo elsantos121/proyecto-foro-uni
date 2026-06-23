@@ -39,7 +39,7 @@
 
 .input-busqueda:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: #f7a611;
 }
 
 .categorias {
@@ -63,13 +63,13 @@
 }
 
 .categoria-btn.active {
-  background: #007bff;
+  background: orange;
   color: white;
-  border-color: #007bff;
+  border-color: orange;
 }
 
 .badge {
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   padding: 2px 8px;
   border-radius: 12px;
   font-size: 0.8rem;
@@ -92,7 +92,7 @@
 
 .recurso-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .recurso-imagen {
@@ -228,8 +228,13 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .vacio {

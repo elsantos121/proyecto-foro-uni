@@ -1,11 +1,84 @@
-.pagina { font-family: Arial, sans-serif; background: #f4f6f8; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
-.form { background: white; border-radius: 12px; padding: 36px; width: 100%; max-width: 420px; border: 1px solid #dde3ec; }
-h1 { font-size: 1.5rem; color: #1a3c5e; margin: 0 0 4px; }
-.sub { color: #555; font-size: .875rem; margin: 0 0 22px; }
-.sub a { color: #2d6a9f; }
-.error { background: #fde8e8; color: #c0392b; padding: 10px 14px; border-radius: 6px; font-size: .875rem; margin-bottom: 14px; }
-label { display: block; font-size: .875rem; font-weight: bold; color: #333; margin-bottom: 5px; margin-top: 14px; }
-input, select { width: 100%; padding: 10px 12px; border: 1px solid #ccc; border-radius: 6px; font-size: .9rem; box-sizing: border-box; }
-input:focus, select:focus { outline: none; border-color: #2d6a9f; }
-button { width: 100%; background: #1a3c5e; color: white; border: none; padding: 12px; border-radius: 6px; font-size: 1rem; cursor: pointer; margin-top: 20px; }
-button:hover { background: #245280; }
+.pagina {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form {
+    background: white;
+    border-radius: 12px;
+    padding: 36px;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid #dde3ec;
+}
+
+h1 {
+    font-size: 1.5rem;
+
+    margin: 0 0 4px;
+}
+
+.sub {
+    color: #555;
+    font-size: .875rem;
+    margin: 0 0 22px;
+}
+
+.sub a {
+    color: #ffb158;
+}
+
+.error {
+    background: #fde8e8;
+    color: #c0392b;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: .875rem;
+    margin-bottom: 14px;
+}
+
+label {
+    display: block;
+    font-size: .875rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    margin-top: 14px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: .9rem;
+    box-sizing: border-box;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #ffb923;
+}
+
+button {
+    width: 100%;
+    background: orange;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: rgb(255, 200, 97);
+}

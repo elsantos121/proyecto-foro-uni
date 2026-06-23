@@ -1,23 +1,41 @@
 <div class="home">
   <div class="hero">
-    <h1>Bienvenido al Foro Universitario 🎓</h1>
+    <h1>Bienvenido al Foro Universitario </h1>
     <p>Compartí apuntes, hacé preguntas y debatí con toda la comunidad universitaria.</p>
     @if (!auth.estaLogueado()) {
-      <div class="hero-btns">
-        <a routerLink="/registro" class="btn-primary">Registrarse gratis</a>
-        <a routerLink="/foro"     class="btn-secondary">Ver el foro</a>
-      </div>
+    <div class="hero-btns">
+      <a routerLink="/registro" class="btn-primary">Registrarse gratis</a>
+      <a routerLink="/foro" class="btn-secondary">Ver el foro</a>
+    </div>
     } @else {
-      <a routerLink="/foro" class="btn-primary">Ir al foro</a>
+    <a routerLink="/foro" class="btn-primary">Ir al foro</a>
     }
   </div>
 
   <div class="secciones">
-    <a routerLink="/foro"      class="card"><span>💬</span><h2>Foro</h2><p>Preguntas, debates y recursos organizados por materia.</p></a>
-    <a routerLink="/servicios" class="card"><span>⚙️</span><h2>Servicios</h2><p>Conocé todo lo que podés hacer en la plataforma.</p></a>
-    <a routerLink="/blog"      class="card"><span>📰</span><h2>Blog</h2><p>Novedades y actualizaciones de la comunidad.</p></a>
-    <a routerLink="/galeria"   class="card"><span>🖼️</span><h2>Galería</h2><p>Imágenes y materiales del proyecto.</p></a>
-    <a routerLink="/nosotros"  class="card"><span>🏫</span><h2>Nosotros</h2><p>El equipo detrás del proyecto.</p></a>
-    <a routerLink="/contacto"  class="card"><span>📬</span><h2>Contacto</h2><p>Dudas, sugerencias o reportes.</p></a>
+    <a routerLink="/foro" class="card">
+      <h2>Foro</h2>
+      <p>Preguntas, debates y recursos organizados por materia.</p>
+    </a>
+    <a routerLink="/servicios" class="card">
+      <h2>Servicios</h2>
+      <p>Conocé todo lo que podés hacer en la plataforma.</p>
+    </a>
+    <a routerLink="/blog" class="card">
+      <h2>Blog</h2>
+      <p>Novedades y actualizaciones de la comunidad.</p>
+    </a>
+    <a routerLink="/galeria" class="card">
+      <h2>Galería</h2>
+      <p>Imágenes y materiales del proyecto.</p>
+    </a>
+    <a routerLink="/nosotros" class="card">
+      <h2>Nosotros</h2>
+      <p>El equipo detrás del proyecto.</p>
+    </a>
+    <a routerLink="/contacto" class="card">
+      <h2>Contacto</h2>
+      <p>Dudas, sugerencias o reportes.</p>
+    </a>
   </div>
 </div>

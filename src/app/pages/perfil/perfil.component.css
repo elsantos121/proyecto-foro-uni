@@ -1,23 +1,151 @@
-.pagina { font-family: Arial, sans-serif; background: #f4f6f8; min-height: 100vh; max-width: 700px; margin: 0 auto; padding: 28px 20px; }
-.card-perfil { background: white; border-radius: 12px; padding: 26px; border: 1px solid #dde3ec; display: flex; gap: 22px; align-items: flex-start; margin-bottom: 22px; }
-.avatar { width: 68px; height: 68px; background: #1a3c5e; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: bold; flex-shrink: 0; }
-.info h1 { font-size: 1.3rem; color: #1a2a3a; margin: 0 0 3px; }
-.info > p { color: #666; font-size: .85rem; margin: 0 0 10px; }
-.badges { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 7px; }
-.badge { font-size: .7rem; padding: 2px 9px; border-radius: 999px; background: #f0f4f8; color: #555; }
-.rol-administrador { background: #fde8e8; color: #c0392b; }
-.rol-moderador     { background: #fef3e2; color: #b7791f; }
-.rol-estudiante    { background: #e8f1f9; color: #1a6aa3; }
-.rep               { background: #fffae8; color: #b7791f; }
-.fecha { font-size: .73rem; color: #aaa; margin: 0; }
-.seccion h2 { font-size: 1.05rem; color: #1a3c5e; margin: 0 0 12px; }
-.card-pub { display: flex; align-items: center; gap: 8px; background: white; border: 1px solid #dde3ec; border-radius: 8px; padding: 12px 14px; text-decoration: none; color: inherit; margin-bottom: 8px; }
-.card-pub:hover { box-shadow: 0 2px 7px rgba(0,0,0,.07); }
-.tipo { font-size: .7rem; padding: 2px 8px; border-radius: 999px; white-space: nowrap; }
-.tipo-pregunta { background: #e8f4fd; color: #1a6aa3; }
-.tipo-debate   { background: #fef3e2; color: #b7791f; }
-.tipo-recurso  { background: #e8f8f0; color: #1a7a4a; }
-.titulo { flex: 1; font-size: .88rem; color: #1a2a3a; }
-.votos  { font-size: .78rem; color: #888; white-space: nowrap; }
-.vacio  { color: #888; font-size: .88rem; }
-.vacio a { color: #2d6a9f; }
+.pagina {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    min-height: 100vh;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 28px 20px;
+}
+
+.card-perfil {
+    background: white;
+    border-radius: 12px;
+    padding: 26px;
+    border: 1px solid #dde3ec;
+    display: flex;
+    gap: 22px;
+    align-items: flex-start;
+    margin-bottom: 22px;
+}
+
+.avatar {
+    width: 68px;
+    height: 68px;
+    background: #1a3c5e;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.info h1 {
+    font-size: 1.3rem;
+    color: #1a2a3a;
+    margin: 0 0 3px;
+}
+
+.info>p {
+    color: #666;
+    font-size: .85rem;
+    margin: 0 0 10px;
+}
+
+.badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 7px;
+}
+
+.badge {
+    font-size: .7rem;
+    padding: 2px 9px;
+    border-radius: 999px;
+    background: #f0f4f8;
+    color: #555;
+}
+
+.rol-administrador {
+    background: #fde8e8;
+    color: #c0392b;
+}
+
+.rol-moderador {
+    background: #fef3e2;
+    color: #b7791f;
+}
+
+.rol-estudiante {
+    background: #e8f1f9;
+    color: #1a6aa3;
+}
+
+.rep {
+    background: #fffae8;
+    color: #b7791f;
+}
+
+.fecha {
+    font-size: .73rem;
+    color: #aaa;
+    margin: 0;
+}
+
+.seccion h2 {
+    font-size: 1.05rem;
+    margin: 0 0 12px;
+}
+
+.card-pub {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    border: 1px solid #dde3ec;
+    border-radius: 8px;
+    padding: 12px 14px;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 8px;
+}
+
+.card-pub:hover {
+    box-shadow: 0 2px 7px rgba(0, 0, 0, .07);
+}
+
+.tipo {
+    font-size: .7rem;
+    padding: 2px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+
+.tipo-pregunta {
+    background: #e8f4fd;
+    color: #1a6aa3;
+}
+
+.tipo-debate {
+    background: #fef3e2;
+    color: #b7791f;
+}
+
+.tipo-recurso {
+    background: #e8f8f0;
+    color: #1a7a4a;
+}
+
+.titulo {
+    flex: 1;
+    font-size: .88rem;
+    color: #1a2a3a;
+}
+
+.votos {
+    font-size: .78rem;
+    color: #888;
+    white-space: nowrap;
+}
+
+.vacio {
+    color: #888;
+    font-size: .88rem;
+}
+
+.vacio a {
+    color: #2d6a9f;
+}
