@@ -35,7 +35,6 @@ El proyecto se divide en tres módulos principales: **usuarios**, **contenido** 
 - Categorías por materia o carrera (Programación Web, Base de Datos, etc.)
 - Comentarios y respuestas anidadas en cada publicación
 - Sistema de votos (👍/👎) para destacar las mejores respuestas
-- Subida de archivos adjuntos (PDF, imágenes) para compartir apuntes
 - Buscador por palabras clave, categoría o etiquetas
 - Marcar una respuesta como "solución" en publicaciones de tipo pregunta
 
