@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <a routerLink="/home" class="logo"><img src="/upc.png" alt="UPC" height="45" width="45" class="d-inline-block"></a>
+
+  <div class="links" [class.abierto]="menuAbierto">
+    <a routerLink="/home" routerLinkActive="activo" (click)="menuAbierto=false">Inicio</a>
+    <a routerLink="/foro" routerLinkActive="activo" (click)="menuAbierto=false">Foro</a>
+    <a routerLink="/servicios" routerLinkActive="activo" (click)="menuAbierto=false">Servicios</a>
+    <a routerLink="/blog" routerLinkActive="activo" (click)="menuAbierto=false">Blog</a>
+    <a routerLink="/galeria" routerLinkActive="activo" (click)="menuAbierto=false">Galería</a>
+    <a routerLink="/nosotros" routerLinkActive="activo" (click)="menuAbierto=false">Nosotros</a>
+    <a routerLink="/contacto" routerLinkActive="activo" (click)="menuAbierto=false">Contacto</a>
+
+    @if (auth.estaLogueado()) {
+    @if (auth.esAdmin()) {
+    <a routerLink="/admin" routerLinkActive="activo" (click)="menuAbierto=false">Admin</a>
+    }
+    <a routerLink="/perfil" routerLinkActive="activo" (click)="menuAbierto=false">Mi perfil</a>
+    <button class="btn-logout" (click)="logout(); menuAbierto=false">Cerrar sesión</button>
+    } @else {
+    <a routerLink="/login" routerLinkActive="activo" (click)="menuAbierto=false">Ingresar</a>
+    <a routerLink="/registro" class="btn-registro" (click)="menuAbierto=false">Registrarse</a>
+    }
+  </div>
+
+  <button class="hamburger" (click)="menuAbierto=!menuAbierto">☰</button>
+</nav>

@@ -1,0 +1,18 @@
+<div class="pagina">
+  <div class="form">
+    <h1>Iniciar sesión</h1>
+    <p class="sub">¿No tenés cuenta? <a routerLink="/registro">Registrarse</a></p>
+    @if (error) { <div class="error">{{ error }}</div> }
+    <label>Email</label>
+    <input type="email"    [(ngModel)]="email"    placeholder="tu&#64;email.com" />
+    <label>Contraseña</label>
+    <input type="password" [(ngModel)]="password" placeholder="Tu contraseña" />
+    <button (click)="login()">Ingresar</button>
+    <div class="demo">
+      <p>Cuentas de prueba:</p>
+      <code>admin&#64;foro.com / admin123 (Admin)</code>
+      <code>mod&#64;foro.com / mod123 (Moderador)</code>
+      <code>user&#64;foro.com / user123 (Estudiante)</code>
+    </div>
+  </div>
+</div>

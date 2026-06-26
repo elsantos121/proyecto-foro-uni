@@ -1,0 +1,44 @@
+<div class="novedades-container">
+  <div class="novedades-header">
+    <h1>Novedades</h1>
+    <p class="subtitle">Mantente al día con las últimas noticias de la universidad</p>
+  </div>
+
+  <div class="filtros">
+    <button
+      class="filtro-btn"
+      [class.activo]="categoriaSeleccionada === 'todas'"
+      (click)="filtrar('todas')">
+      Todas
+    </button>
+    <button
+      *ngFor="let cat of categorias"
+      class="filtro-btn"
+      [class.activo]="categoriaSeleccionada === cat"
+      (click)="filtrar(cat)">
+      {{ cat }}
+    </button>
+  </div>
+
+  <div class="novedades-grid">
+    <div *ngIf="novedadesFiltradas.length === 0" class="vacio">
+      <p>No hay novedades en esta categoría.</p>
+    </div>
+
+    <article *ngFor="let novedad of novedadesFiltradas" class="novedad-card">
+      <div class="novedad-icono">📋</div>
+      <div class="novedad-body">
+        <div class="novedad-meta">
+          <span class="categoria-badge">{{ novedad.categoria }}</span>
+          <span class="fecha">{{ novedad.fechaPublicacion | date:'dd/MM/yyyy' }}</span>
+        </div>
+        <h2 class="novedad-titulo">{{ novedad.titulo }}</h2>
+        <p class="novedad-resumen">{{ novedad.resumen }}</p>
+        <div class="novedad-footer">
+          <span class="autor">Por {{ novedad.autor }}</span>
+          <a [routerLink]="['/novedades', novedad.id]" class="leer-mas-btn">Leer más →</a>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>

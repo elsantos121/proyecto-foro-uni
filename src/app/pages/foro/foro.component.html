@@ -1,0 +1,55 @@
+<div class="pagina">
+  <div class="encabezado">
+    <div>
+      <h1>Foro Universitario</h1>
+      <p>{{ publicaciones.length }} publicación(es)</p>
+    </div>
+    @if (auth.estaLogueado()) {
+    <a routerLink="/nueva-publicacion" class="btn-nueva">+ Nueva publicación</a>
+    }
+  </div>
+
+  <div class="filtros">
+    <input type="text" [(ngModel)]="termino" (input)="cargar()" placeholder="Buscar..." />
+    <select [(ngModel)]="categoriaFiltro" (change)="cargar()">
+      <option value="">Todas las categorías</option>
+      @for (c of categorias; track c.id) {
+      <option [value]="c.id">{{ c.icono }} {{ c.nombre }}</option>
+      }
+    </select>
+    <select [(ngModel)]="tipoFiltro" (change)="cargar()">
+      <option value="">Todos los tipos</option>
+      <option value="pregunta"> Preguntas</option>
+      <option value="debate"> Debates</option>
+      <option value="recurso"> Recursos</option>
+    </select>
+    <button (click)="limpiar()">Limpiar</button>
+  </div>
+
+  <div class="lista">
+    @for (pub of publicaciones; track pub.id) {
+    <a [routerLink]="['/foro', pub.id]" class="card">
+      <div class="izq">
+        <span class="num">{{ pub.votos }}</span>
+        <span class="lbl">votos</span>
+        @if (pub.solucionId) { <span class="sol">✅</span> }
+      </div>
+      <div class="der">
+        <div class="meta">
+          <span class="tipo tipo-{{ pub.tipo }}">{{ pub.tipo }}</span>
+          <span class="cat">{{ getNombreCategoria(pub.categoriaId) }}</span>
+          @for (t of pub.tags; track t) { <span class="tag">#{{ t }}</span> }
+        </div>
+        <h2>{{ pub.titulo }}</h2>
+        <p>{{ resumen(pub.contenido) }}</p>
+        <div class="footer">
+          <span>{{ pub.autorNombre }}</span>
+          <span>{{ pub.fechaCreacion }}</span>
+        </div>
+      </div>
+    </a>
+    } @empty {
+    <div class="vacio">No hay publicaciones que coincidan con tu búsqueda.</div>
+    }
+  </div>
+</div>

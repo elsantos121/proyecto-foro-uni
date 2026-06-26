@@ -1,0 +1,102 @@
+<div class="galeria-container">
+  <!-- Header -->
+  <div class="galeria-header">
+    <h1>Galería de Recursos</h1>
+    <p class="subtitle">Comparte y encuentra materiales de estudio</p>
+  </div>
+
+  <!-- Filtros -->
+  <div class="filtros-container">
+    <!-- Búsqueda -->
+    <div class="busqueda">
+      <input 
+        type="text" 
+        [(ngModel)]="terminoBusqueda" 
+        (input)="buscarRecursos()"
+        placeholder="Buscar recursos..."
+        class="input-busqueda"
+      />
+    </div>
+
+    <!-- Categorías -->
+    <div class="categorias">
+      <button 
+        class="categoria-btn" 
+        [class.active]="categoriaSeleccionada === 'todas'"
+        (click)="filtrarPorCategoria('todas')">
+        Todas
+      </button>
+      <button 
+        *ngFor="let categoria of categorias"
+        class="categoria-btn"
+        [class.active]="categoriaSeleccionada === categoria.id"
+        (click)="filtrarPorCategoria(categoria.id)">
+        <i [class]="categoria.icono"></i>
+        {{ categoria.nombre }}
+        <span class="badge">{{ categoria.cantidad }}</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Loading -->
+  <div *ngIf="isLoading" class="loading">
+    <div class="spinner"></div>
+    <p>Cargando recursos...</p>
+  </div>
+
+  <!-- Grid de recursos -->
+  <div *ngIf="!isLoading" class="recursos-grid">
+    <div *ngIf="recursosFiltrados.length === 0" class="vacio">
+      <p>No se encontraron recursos</p>
+      <p class="vacio-sub">Intenta con otros filtros</p>
+    </div>
+
+    <div *ngFor="let recurso of recursosFiltrados" class="recurso-card">
+      <!-- Miniatura -->
+      <div class="recurso-imagen">
+        <div class="tipo-badge" [style.background]="getColorTipo(recurso.tipo)">
+          <i [class]="getIconoTipo(recurso.tipo)"></i>
+          {{ recurso.tipo }}
+        </div>
+        <div class="imagen-placeholder">
+          <i [class]="getIconoTipo(recurso.tipo)" class="icono-grande"></i>
+        </div>
+      </div>
+
+      <!-- Info -->
+      <div class="recurso-info">
+        <h3>{{ recurso.titulo }}</h3>
+        <p class="descripcion">{{ recurso.descripcion }}</p>
+        
+        <div class="tags">
+          <span *ngFor="let tag of recurso.tags" class="tag">
+            #{{ tag }}
+          </span>
+        </div>
+
+        <div class="meta">
+          <span class="usuario">
+            Subido por: {{ recurso.subidoPor.nombre }}
+          </span>
+          <span class="fecha">
+            {{ recurso.fechaSubida | date:'dd/MM/yyyy' }}
+          </span>
+        </div>
+
+        <div class="acciones">
+  <button class="btn-like" [class.liked]="recurso.userLiked" (click)="darLike(recurso.id)">
+    <i class="fas fa-heart"></i> 
+    <span>Me gusta ({{ recurso.likes }})</span>
+  </button>
+  <button class="btn-descarga" (click)="descargarRecurso(recurso)">
+    <i class="fas fa-download"></i> 
+    <span>Descargar ({{ recurso.descargas }})</span>
+  </button>
+  <button class="btn-ver" (click)="verDetalle(recurso.id)">
+    <i class="fas fa-eye"></i> Ver
+  </button>
+</div>
+      </div>
+    </div>
+  </div>
+</div>

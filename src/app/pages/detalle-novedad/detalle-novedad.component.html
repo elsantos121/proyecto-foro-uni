@@ -1,0 +1,44 @@
+<div class="detalle-container">
+
+  <div *ngIf="!novedad" class="no-encontrada">
+    <p>No se encontró la novedad solicitada.</p>
+    <a routerLink="/blog" class="volver-btn">← Volver a Novedades</a>
+  </div>
+
+  <div *ngIf="novedad">
+    <a routerLink="/blog" class="volver-link">← Volver a Novedades</a>
+
+    <article class="novedad-articulo">
+      <div class="articulo-header">
+        <div class="icono-grande">📋</div>
+        <div>
+          <span class="categoria-badge">{{ novedad.categoria }}</span>
+          <h1 class="articulo-titulo">{{ novedad.titulo }}</h1>
+          <div class="articulo-meta">
+            <span>📅 {{ formatearFecha(novedad.fechaPublicacion) }}</span>
+            <span>✍️ {{ novedad.autor }}</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="articulo-cuerpo">
+        <p *ngFor="let parrafo of getParagraphs(novedad.contenido)" class="parrafo">
+          {{ parrafo }}
+        </p>
+      </div>
+    </article>
+
+    <section class="relacionadas">
+      <h3>Otras novedades</h3>
+      <div class="relacionadas-grid">
+        <a *ngFor="let rel of relacionadas" [routerLink]="['/blog', rel.id]" class="rel-card">
+          <span class="rel-icono">📋</span>
+          <div>
+            <span class="rel-categoria">{{ rel.categoria }}</span>
+            <p class="rel-titulo">{{ rel.titulo }}</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+<div class="pagina">
+  <h1>Panel de Administración</h1>
+
+  <div class="tabs">
+    <button [class.activo]="seccion==='usuarios'" (click)="seccion='usuarios'"> Usuarios ({{ usuarios.length
+      }})</button>
+    <button [class.activo]="seccion==='reportes'" (click)="seccion='reportes'"> Reportes ({{ reportadas.length
+      }})</button>
+    <button [class.activo]="seccion==='categorias'" (click)="seccion='categorias'"> Categorías ({{ categorias.length
+      }})</button>
+  </div>
+
+  @if (seccion === 'usuarios') {
+  <div class="tabla-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Email</th>
+          <th>Carrera</th>
+          <th>Rep.</th>
+          <th>Rol</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (u of usuarios; track u.id) {
+        <tr>
+          <td>{{ u.nombre }}</td>
+          <td>{{ u.email }}</td>
+          <td>{{ u.carrera }}</td>
+          <td>{{ u.reputacion }}</td>
+          <td>
+            <select [value]="u.rol" (change)="cambiarRol(u.id, $event)">
+              <option value="estudiante">Estudiante</option>
+              <option value="moderador">Moderador</option>
+              <option value="administrador">Administrador</option>
+            </select>
+          </td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  }
+
+  @if (seccion === 'reportes') {
+  @if (reportadas.length === 0) {
+  <p class="vacio">No hay publicaciones reportadas. ✅</p>
+  }
+  @for (pub of reportadas; track pub.id) {
+  <div class="card-rep">
+    <div>
+      <h3><a [routerLink]="['/foro', pub.id]">{{ pub.titulo }}</a></h3>
+      <p>Por {{ pub.autorNombre }} · 🚩 {{ pub.reportes.length }} reporte(s)</p>
+    </div>
+    <button (click)="eliminarPub(pub.id)">Eliminar</button>
+  </div>
+  }
+  }
+
+  @if (seccion === 'categorias') {
+  <div class="nueva-cat">
+    <h2>Nueva categoría</h2>
+    <div class="fila">
+      <input [(ngModel)]="nuevaCat.icono" placeholder="Icono " style="max-width:80px" />
+      <input [(ngModel)]="nuevaCat.nombre" placeholder="Nombre *" />
+      <input [(ngModel)]="nuevaCat.descripcion" placeholder="Descripción" />
+      <button (click)="crearCat()">Agregar</button>
+    </div>
+  </div>
+  <div class="lista-cats">
+    @for (cat of categorias; track cat.id) {
+    <div class="card-cat">
+      <span>{{ cat.icono }} <strong>{{ cat.nombre }}</strong> — {{ cat.descripcion }}</span>
+      <button (click)="eliminarCat(cat.id)">Eliminar</button>
+    </div>
+    }
+  </div>
+  }
+</div>

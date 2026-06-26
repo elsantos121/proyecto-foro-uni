@@ -1,0 +1,33 @@
+.nosotros-page {
+  padding: 2rem 1.5rem;
+}
+
+.contenido {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.contenido h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.info-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 1rem;
+  padding: 1.4rem;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.05);
+}
+
+.info-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.info-card p {
+  line-height: 1.75;
+  min-height: 5rem;
+}

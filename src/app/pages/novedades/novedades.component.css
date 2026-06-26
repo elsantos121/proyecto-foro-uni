@@ -1,0 +1,137 @@
+.novedades-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.novedades-header {
+  margin-bottom: 28px;
+}
+.novedades-header h1 {
+  font-size: 2rem;
+  color: #1a3c5e;
+  margin: 0 0 6px;
+}
+.subtitle {
+  color: #666;
+  margin: 0;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.filtro-btn {
+  padding: 7px 16px;
+  border: 2px solid #1a3c5e;
+  border-radius: 20px;
+  background: white;
+  color: #1a3c5e;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.filtro-btn:hover,
+.filtro-btn.activo {
+  background: #1a3c5e;
+  color: white;
+}
+
+/* Grid */
+.novedades-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vacio {
+  text-align: center;
+  padding: 40px;
+  color: #888;
+}
+
+.novedad-card {
+  display: flex;
+  gap: 20px;
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.novedad-card:hover {
+  box-shadow: 0 4px 14px rgba(26,60,94,0.12);
+  transform: translateY(-2px);
+}
+
+.novedad-icono {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+.novedad-body {
+  flex: 1;
+}
+
+.novedad-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.categoria-badge {
+  background: #e8f0fb;
+  color: #1a3c5e;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 9px;
+  border-radius: 99px;
+  letter-spacing: 0.3px;
+}
+.fecha {
+  color: #999;
+  font-size: 12px;
+}
+
+.novedad-titulo {
+  font-size: 1.1rem;
+  color: #1a3c5e;
+  margin: 0 0 8px;
+  font-weight: 600;
+}
+
+.novedad-resumen {
+  color: #555;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
+
+.novedad-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.autor {
+  color: #888;
+  font-size: 12px;
+  font-style: italic;
+}
+.leer-mas-btn {
+  color: #1a3c5e;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.leer-mas-btn:hover {
+  color: #2a5ca8;
+}

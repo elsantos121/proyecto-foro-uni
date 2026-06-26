@@ -1,0 +1,31 @@
+<div class="pagina">
+  @if (usuario) {
+    <div class="card-perfil">
+      <div class="avatar">{{ usuario.nombre.charAt(0).toUpperCase() }}</div>
+      <div class="info">
+        <h1>{{ usuario.nombre }}</h1>
+        <p>{{ usuario.email }}</p>
+        <div class="badges">
+          <span class="badge rol-{{ usuario.rol }}">{{ usuario.rol }}</span>
+          <span class="badge">{{ usuario.carrera }}</span>
+          <span class="badge">{{ usuario.anio }}° año</span>
+          <span class="badge rep">⭐ {{ usuario.reputacion }} pts</span>
+        </div>
+        <p class="fecha">Miembro desde {{ usuario.fechaRegistro }}</p>
+      </div>
+    </div>
+
+    <div class="seccion">
+      <h2>Mis publicaciones ({{ publicaciones.length }})</h2>
+      @for (pub of publicaciones; track pub.id) {
+        <a [routerLink]="['/foro', pub.id]" class="card-pub">
+          <span class="tipo tipo-{{ pub.tipo }}">{{ pub.tipo }}</span>
+          <span class="titulo">{{ pub.titulo }}</span>
+          <span class="votos">{{ pub.votos }} votos</span>
+        </a>
+      } @empty {
+        <p class="vacio">Todavía no publicaste nada. <a routerLink="/nueva-publicacion">Crear publicación</a></p>
+      }
+    </div>
+  }
+</div>

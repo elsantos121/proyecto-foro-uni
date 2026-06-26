@@ -1,0 +1,85 @@
+.contactos {
+    padding: 80px 10%;
+    background: #f5f7fa;
+}
+
+.contactos h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #666;
+    margin-bottom: 50px;
+    font-size: 1rem;
+}
+
+.contactos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.15);
+}
+
+.card h3 {
+    color: #222;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.card a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 10px;
+    transition: .3s;
+    font-weight: bold;
+}
+
+.card a:first-of-type {
+    background: #0A66C2;
+}
+
+.card a:first-of-type:hover {
+    background: #084b91;
+}
+
+.card a:last-of-type {
+    background: #24292e;
+}
+
+.card a:last-of-type:hover {
+    background: #111;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+    .contactos{
+        padding:60px 6%;
+    }
+
+    .contactos h2{
+        font-size:2rem;
+    }
+
+}
