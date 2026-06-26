@@ -1,11 +1,87 @@
-.pagina { font-family: Arial, sans-serif; background: #f4f6f8; min-height: 100vh; padding: 28px 20px; }
-.form { background: white; border-radius: 12px; padding: 30px; max-width: 680px; margin: 0 auto; border: 1px solid #dde3ec; }
-.volver { color: #2d6a9f; text-decoration: none; font-size: .85rem; display: inline-block; margin-bottom: 14px; }
-h1 { font-size: 1.4rem; color: #1a3c5e; margin: 0 0 20px; }
-.error { background: #fde8e8; color: #c0392b; padding: 10px 14px; border-radius: 6px; font-size: .875rem; margin-bottom: 14px; }
-label { display: block; font-size: .875rem; font-weight: bold; color: #333; margin-bottom: 5px; margin-top: 14px; }
-input, select, textarea { width: 100%; padding: 9px 11px; border: 1px solid #ccc; border-radius: 6px; font-size: .9rem; box-sizing: border-box; font-family: Arial, sans-serif; }
-input:focus, select:focus, textarea:focus { outline: none; border-color: #2d6a9f; }
-.fila { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-button { background: #1a3c5e; color: white; border: none; padding: 11px 28px; border-radius: 6px; font-size: .95rem; cursor: pointer; margin-top: 18px; }
-button:hover { background: #245280; }
+.pagina {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    min-height: 100vh;
+    padding: 28px 20px;
+}
+
+.form {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 680px;
+    margin: 0 auto;
+    border: 1px solid #dde3ec;
+}
+
+.volver {
+    color: rgb(228, 167, 55);
+    text-decoration: none;
+    font-size: .85rem;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+h1 {
+    font-size: 1.4rem;
+
+    margin: 0 0 20px;
+}
+
+.error {
+    background: #fde8e8;
+    color: #c0392b;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: .875rem;
+    margin-bottom: 14px;
+}
+
+label {
+    display: block;
+    font-size: .875rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    margin-top: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 9px 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: .9rem;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: rgb(253, 184, 54);
+}
+
+.fila {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+button {
+    background: orange;
+    color: white;
+    border: none;
+    padding: 11px 28px;
+    border-radius: 6px;
+    font-size: .95rem;
+    cursor: pointer;
+    margin-top: 18px;
+}
+
+button:hover {
+    background: rgb(221, 144, 0);
+}
