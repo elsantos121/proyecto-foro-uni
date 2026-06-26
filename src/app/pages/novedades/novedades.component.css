@@ -10,7 +10,7 @@
 }
 .novedades-header h1 {
   font-size: 2rem;
-  color: #1a3c5e;
+  color: #e65c00; 
   margin: 0 0 6px;
 }
 .subtitle {
@@ -27,17 +27,17 @@
 }
 .filtro-btn {
   padding: 7px 16px;
-  border: 2px solid #1a3c5e;
+  border: 2px solid #e65c00; 
   border-radius: 20px;
-  background: white;
-  color: #1a3c5e;
+  background: white; 
+  color: #e65c00;
   font-size: 13px;
   cursor: pointer;
   transition: all 0.2s;
 }
 .filtro-btn:hover,
 .filtro-btn.activo {
-  background: #1a3c5e;
+  background: #e65c00; 
   color: white;
 }
 
@@ -57,7 +57,7 @@
 .novedad-card {
   display: flex;
   gap: 20px;
-  background: white;
+  background: white; 
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   padding: 20px 24px;
@@ -65,7 +65,7 @@
   transition: box-shadow 0.2s, transform 0.2s;
 }
 .novedad-card:hover {
-  box-shadow: 0 4px 14px rgba(26,60,94,0.12);
+  box-shadow: 0 4px 14px rgba(230,92,0,0.12); 
   transform: translateY(-2px);
 }
 
@@ -88,8 +88,8 @@
   margin-bottom: 8px;
 }
 .categoria-badge {
-  background: #e8f0fb;
-  color: #1a3c5e;
+  background: #fff0e6; 
+  color: #d45000; 
   font-size: 11px;
   font-weight: 600;
   padding: 2px 9px;
@@ -103,7 +103,7 @@
 
 .novedad-titulo {
   font-size: 1.1rem;
-  color: #1a3c5e;
+  color: #e65c00; /* Título de la tarjeta naranja */
   margin: 0 0 8px;
   font-weight: 600;
 }
@@ -126,12 +126,12 @@
   font-style: italic;
 }
 .leer-mas-btn {
-  color: #1a3c5e;
+  color: #e65c00; /* Link naranja */
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s;
 }
 .leer-mas-btn:hover {
-  color: #2a5ca8;
+  color: #ff751a; /* Naranja más brillante al pasar el mouse */
 }
