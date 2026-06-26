@@ -14,18 +14,21 @@
 .volver-link,
 .volver-btn {
   display: inline-block;
-  color: #1a3c5e;
+  color: #e65c00; 
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 24px;
 }
 .volver-link:hover,
-.volver-btn:hover { text-decoration: underline; }
+.volver-btn:hover { 
+  color: #ff751a; 
+  text-decoration: underline; 
+}
 
 /* Artículo */
 .novedad-articulo {
-  background: white;
+  background: white; 
   border: 1px solid #e0e0e0;
   border-radius: 14px;
   overflow: hidden;
@@ -33,7 +36,7 @@
 }
 
 .articulo-header {
-  background: linear-gradient(135deg, #1a3c5e, #2a5ca8);
+  background: linear-gradient(135deg, #e65c00, #ff751a); 
   color: white;
   padding: 30px 32px;
   display: flex;
@@ -46,7 +49,7 @@
 }
 .categoria-badge {
   display: inline-block;
-  background: rgba(255,255,255,0.25);
+  background: rgba(255, 255, 255, 0.25);
   color: white;
   font-size: 11px;
   font-weight: 600;
@@ -86,7 +89,7 @@
   margin-top: 36px;
 }
 .relacionadas h3 {
-  color: #1a3c5e;
+  color: #e65c00; 
   font-size: 1.1rem;
   margin: 0 0 14px;
 }
@@ -103,23 +106,23 @@
   border: 1px solid #e0e0e0;
   border-radius: 10px;
   text-decoration: none;
-  background: white;
+  background: white; 
   transition: box-shadow 0.2s, transform 0.2s;
 }
 .rel-card:hover {
-  box-shadow: 0 4px 12px rgba(26,60,94,0.1);
+  box-shadow: 0 4px 12px rgba(230, 92, 0, 0.12); 
   transform: translateY(-2px);
 }
 .rel-icono { font-size: 1.6rem; flex-shrink: 0; }
 .rel-categoria {
   font-size: 10px;
-  color: #2a5ca8;
+  color: #d45000; 
   font-weight: 600;
   letter-spacing: 0.3px;
 }
 .rel-titulo {
   font-size: 13px;
-  color: #1a3c5e;
+  color: #e65c00; 
   font-weight: 600;
   margin: 2px 0 0;
   line-height: 1.4;
