@@ -34,7 +34,7 @@ El proyecto se divide en tres módulos principales: **usuarios**, **contenido** 
 - Crear, editar y eliminar publicaciones (preguntas, debates, recursos)
 - Categorías por materia o carrera (Programación Web, Base de Datos, etc.)
 - Comentarios y respuestas anidadas en cada publicación
-- Sistema de votos (👍/👎) para destacar las mejores respuestas
+- Sistema de votos  para destacar las mejores respuestas
 - Buscador por palabras clave, categoría o etiquetas
 - Marcar una respuesta como "solución" en publicaciones de tipo pregunta
 
@@ -56,36 +56,7 @@ El proyecto se divide en tres módulos principales: **usuarios**, **contenido** 
 
 ---
 
-## División de tareas sugerida para el grupo
 
-Siendo 5 o 6 personas, se puede dividir así:
-
-- **2 personas** → Backend (rutas, base de datos, autenticación)
-- **2 personas** → Frontend (diseño, páginas, formularios)
-- **1 persona** → Integración y pruebas
-- **1 persona** (si son 6) → Documentación y deploy
-
----
-
-## Stack tecnológico sugerido
-
-Dependiendo de lo que ya hayan visto en la carrera, algunas opciones:
-
-- **Frontend:** HTML, CSS, JavaScript (o React si ya lo vieron)
-- **Backend:** Node.js + Express / PHP / Python con Flask o Django
-- **Base de datos:** MySQL o PostgreSQL
-- **Extras útiles:** Cloudinary para subir archivos, JWT para autenticación
-
----
-
-## Lo que NO incluirían (para no exceder el alcance)
-
-- Chat en tiempo real
-- Notificaciones push
-- App móvil
-- Integración con sistemas reales de la universidad
-
----
 # ProyectoForoUni
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.13.
@@ -142,6 +113,3 @@ ng e2e
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contacto',
@@ -6,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './contacto.html',
   styleUrl: './contacto.css',
 })
-export class Contacto {
+export class ContactoComponent {
 
 }
